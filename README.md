@@ -1,5 +1,5 @@
-- 如何加入
-    - 使用github名建立自己的文件夹
+## 这是一个 小伙伴们一起刷leetcode 的故事
+
 
 ### 初衷
 ```
@@ -10,3 +10,19 @@
 
   4 以上记录了 学习过程的许多片段 ，回顾，分享，再加工/迭代 都是极好的
 ```
+
+### 如何玩耍
+- 加入：使用`github昵称`建立自己的文件夹
+  - 新建笔记: 笔记名 
+- leetCode 笔记
+- 话题讨论，发issure
+
+### miscellaneous
+- 2种模式
+
+|          | [探索模式](https://leetcode-cn.com/explore) | [题库模式](problemset/all/) |
+| -------- | ------------------------------------------- | --------------------------- |
+| url      | `exlore/...`                                | `problems/questionName`     |
+| 功能场景 | 考试，题集                                  | 刷题，[笔记](https://support.leetcode-cn.com/hc/kb/article/1277857/)，支持搜索        |
+|          |                                             |                             |
+ 
