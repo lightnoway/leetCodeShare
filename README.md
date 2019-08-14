@@ -26,3 +26,7 @@
 | 功能场景 | 考试，题集                                  | 刷题，[笔记](https://support.leetcode-cn.com/hc/kb/article/1277857/)，支持搜索        |
 |          |                                             |                             |
  
+
+- js代码编写与调试 
+  - 在chrome 的Source面板Snippers 里写代码并调试很顺手
+     ![chromeCodeAndDebug](./asset/two-sum@2x.png)
