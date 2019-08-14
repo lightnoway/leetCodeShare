@@ -20,7 +20,7 @@
 ### miscellaneous
 - 2种模式
 
-|          | [探索模式](https://leetcode-cn.com/explore) | [题库模式](problemset/all/) |
+|          | [探索模式](https://leetcode-cn.com/explore) | [题库模式](https://leetcode-cn.com/problemset/all/) |
 | -------- | ------------------------------------------- | --------------------------- |
 | url      | `exlore/...`                                | `problems/questionName`     |
 | 功能场景 | 考试，题集                                  | 刷题，[笔记](https://support.leetcode-cn.com/hc/kb/article/1277857/)，支持搜索        |
