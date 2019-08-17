@@ -52,8 +52,13 @@ module.exports = function countBinarySubstrings(s) {
 
 /**
 技巧
+1
 result += Math.min(repeat,preRepeat);
 可改为
 if(repeat <=preRepeat) result++;
 
+2
+可以用正则思路实现
+  正则来找重复
+  正则 判断是 0011
 */
