@@ -28,10 +28,9 @@ var findAnagrams = function (s, p) {
 	for (let i = 0; i < p.length; i++) {
 		hashP[p[i]]++;
 		hashS[s[i]]++;
-	}
-	const nP = JSON.stringify(hashP);
+	} 
 	for (let i = 0, len = s.length - p.length; i <= len; i++) {
-		if (JSON.stringify(hashS) === nP) {
+		if (objEqual(hashS,hashP)) {
 			result.push(i);
 		}
 		hashS[s[i]]--;
@@ -39,5 +38,12 @@ var findAnagrams = function (s, p) {
 	}
 	return result;
 };
-
+function objEqual(o1,o2){
+	for(let key in o1){
+		if(o2[key]!==o1[key]){
+			return false;
+		}
+	}
+	return true;
+}
 export default findAnagrams;
