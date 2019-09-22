@@ -17,13 +17,22 @@ var groupAnagrams = function(strs) {
 	}
 	return ret;
 };
+// function getHash(str){
+// 	const hash = Object.create(null);
+// 	for(let c of 'abcdefghijklmnopqrstuvwxyz'){
+// 		hash[c]=0;
+// 	}
+// 	for(let c of str){
+// 		hash[c]++
+// 	}
+// 	return  JSON.stringify(hash);
+// }
+ 
+const aCharCode = 'a'.charCodeAt(0); 
 function getHash(str){
-	const hash = Object.create(null);
-	for(let c of 'abcdefghijklmnopqrstuvwxyz'){
-		hash[c]=0;
-	}
+	const hash = Array(26).fill(0); 
 	for(let c of str){
-		hash[c]++
+		hash[c.charCodeAt(0) - aCharCode]++
 	}
-	return  JSON.stringify(hash);
+	return  hash.join('');
 }
