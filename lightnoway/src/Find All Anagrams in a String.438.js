@@ -83,4 +83,39 @@ var findAnagrams = function (s, p) {
 
 	return result;
 };
+
+/**
+ * @param {string} s
+ * @param {string} p
+ * @return {number[]}
+ */
+var findAnagrams = function(s, p) {
+	const pHash = Object.create(null);
+	for(let c of p){
+		pHash[c] = pHash[c]? pHash[c]+1 :1;
+	}
+  
+	let left=0,right=0,matchCount = 0;
+	const ret = [];
+	while(right < s.length){
+		const rC = s[right++];
+		if(rC in pHash){
+			if(pHash[rC]-->0){
+				matchCount++;
+			}
+		}
+		while(matchCount === p.length){
+			if(right - left === p.length){
+				ret.push(left);
+			}
+			const lC = s[left++];
+			if(lC in pHash){
+				if(++pHash[lC]>0){
+					matchCount--;
+				}
+			}
+		}
+	}
+	return ret;
+};
 export default findAnagrams;

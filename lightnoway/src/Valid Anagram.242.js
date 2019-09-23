@@ -19,3 +19,20 @@ var isAnagram = function(s, t) {
 	}
 	return matchCount ===  s.length;
 };
+
+var isAnagram = function(s, t) {
+	if(s.length!==t.length) return false;
+	let sHash= Object.create(null);
+	for(let c of s){
+		sHash[c] = sHash[c]? sHash[c]+1 : 1;
+	}
+	let matchCount = 0;
+	for(let c of t){
+		if(c in sHash && sHash[c]-->0){
+			matchCount++;
+		} else{
+			return false;
+		}
+	}
+	return matchCount === s.length;
+};

@@ -36,3 +36,34 @@ function getHash(str){
 	}
 	return  hash.join('');
 }
+
+//ret 直接构造数组
+var groupAnagrams = function(strs) {
+  const ret = [],mapRetIndex=Object.create(null);
+  for(let str of strs) {
+      const hash = getHash(str);
+      if(!(hash in mapRetIndex)){
+          mapRetIndex[hash] = ret.length;
+          ret.push([]);
+      }
+      ret[mapRetIndex[hash]].push(str);
+  }
+//   debugger;
+  return ret;
+};
+//动态hash
+const mapCharIndex=new Map();
+function getHash(str){
+    const hash = Array(mapCharIndex.size).fill(0);
+    for(let c of str){
+        if(!mapCharIndex.has(c)){
+            hash[mapCharIndex.size]=0;
+            mapCharIndex.set(c,mapCharIndex.size);
+        }
+        hash[mapCharIndex.get(c)]++;
+    }
+    while(hash[hash.length-1]===0){
+        hash.pop();
+    }
+    return hash.join('_');
+}
